@@ -78,3 +78,121 @@ form of choices.
                     }
                 ]
             }
++ Request Ping server to check if it is alive
+**GET**&nbsp;&nbsp;`/api/ping`
+
+
++ Response 200
+
+    + Headers
+    
+            content-type: application/json; charset=utf-8
+            cache-control: max-age=0, private, must-revalidate
+            x-request-id: F5duLrCUuQMdVEkAACUQ
+    + Body
+    
+            {
+              "message": "pong"
+            }
+
+# Group API V1
+## AccountToken [/api/v1/account_tokens/validate]
+### validate - Validate account token [POST /api/v1/account_tokens/validate]
+
+
+ 
+
+
++ Request Validate account token
+**POST**&nbsp;&nbsp;`/api/v1/account_tokens/validate`
+
+    + Headers
+    
+            content-type: multipart/mixed; boundary=plug_conn_test
+    + Body
+    
+            {
+              "token": "SFMyNTY.g2gDdAAAAAJkAAVlbWFpbG0AAAAVdGF0ZS5qYWNvYmlAa29zcy5uYW1lZAAGb3JnX2lkbQAAACQ3ZDJiOTcxOC1jZmZhLTQyNjgtYTIzNi0yYTg2YjdkZTYyODJuBgC0EtTMiwFiAAFRgA.WznO1l6BQgb_nmbG_1WQSzBJV4sryUGK6mUoWFlTJc4"
+            }
+
++ Response 200
+
+    + Headers
+    
+            content-type: application/json; charset=utf-8
+            cache-control: max-age=0, private, must-revalidate
+            x-request-id: F5duLvqCxbtByxwAAHRF
+    + Body
+    
+            {
+              "data": {
+                "email": "tate.jacobi@koss.name",
+                "org_id": "7d2b9718-cffa-4268-a236-2a86b7de6282",
+                "token": "SFMyNTY.g2gDdAAAAAJkAAVlbWFpbG0AAAAVdGF0ZS5qYWNvYmlAa29zcy5uYW1lZAAGb3JnX2lkbQAAACQ3ZDJiOTcxOC1jZmZhLTQyNjgtYTIzNi0yYTg2YjdkZTYyODJuBgC0EtTMiwFiAAFRgA.WznO1l6BQgb_nmbG_1WQSzBJV4sryUGK6mUoWFlTJc4"
+              }
+            }
+### validate_invitation - Validate invitation token [POST /api/v1/account_tokens/validate_invitation]
+
+
+ 
+
+
++ Request Validate invitation token
+**POST**&nbsp;&nbsp;`/api/v1/account_tokens/validate_invitation`
+
+    + Headers
+    
+            content-type: multipart/mixed; boundary=plug_conn_test
+    + Body
+    
+            {
+              "token": "SFMyNTY.g2gDdAAAAAJkAAVlbWFpbG0AAAAUbXlhaC5tb2hyQHN0ZWhyLmluZm9kAAZvcmdfaWRtAAAAJDhkNjk4NjhmLTA2NjEtNGNmZi1iYWI0LWQxOGNkZDU3MzI1OG4GAAsQ1MyLAWIAAVGA.7tqUaHK-91-b8webX0iWr2fcXVv_XYCGu614yr2DHrU"
+            }
+
++ Response 200
+
+    + Headers
+    
+            content-type: application/json; charset=utf-8
+            cache-control: max-age=0, private, must-revalidate
+            x-request-id: F5duLtqBipDZUIIAAHQG
+    + Body
+    
+            {
+              "data": {
+                "email": "myah.mohr@stehr.info",
+                "org_id": "8d69868f-0661-4cff-bab4-d18cdd573258",
+                "token": "SFMyNTY.g2gDdAAAAAJkAAVlbWFpbG0AAAAUbXlhaC5tb2hyQHN0ZWhyLmluZm9kAAZvcmdfaWRtAAAAJDhkNjk4NjhmLTA2NjEtNGNmZi1iYWI0LWQxOGNkZDU3MzI1OG4GAAsQ1MyLAWIAAVGA.7tqUaHK-91-b8webX0iWr2fcXVv_XYCGu614yr2DHrU"
+              }
+            }
+## Password [/api/v1/passwords/forgot]
+### forgot - Forgot password [POST /api/v1/passwords/forgot]
+
+
+ 
+
+
++ Request Forgot password
+**POST**&nbsp;&nbsp;`/api/v1/passwords/forgot`
+
+    + Headers
+    
+            content-type: multipart/mixed; boundary=plug_conn_test
+    + Body
+    
+            {
+              "email": "test@example.com"
+            }
+
++ Response 200
+
+    + Headers
+    
+            content-type: application/json; charset=utf-8
+            cache-control: max-age=0, private, must-revalidate
+            x-request-id: F5duL7lAv_xRSh4AAaKK
+    + Body
+    
+            {
+              "data": {}
+            }
